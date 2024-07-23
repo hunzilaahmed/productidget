@@ -21,7 +21,7 @@ const Detail = () => {
           alt={product.title}
           className="w-20 h-auto mb-4 rounded-lg"
         />
-        <p className=" mb-4">{product.description}</p>
+        <p className=" mb-4">{product.description }</p>
         <p className="text-xl font-semibold">${product.price}</p>
       </div>
     </div>

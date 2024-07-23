@@ -40,11 +40,10 @@ const Product = () => {
 
               <div className="text-center">
                 <div className="col-span-2">
-                  <h6 className=" mb-2">{date}</h6>
                   <h4 className="text-lg font-bold mb-2">{item.title}</h4>
                 </div>
 
-                <div className="flex flex-col  justify-between items-end">
+                <div >
                   <p className="text-lg  mb-4">${item.price}</p>
                   <button
                     onClick={() => goToCart(item.id)}
