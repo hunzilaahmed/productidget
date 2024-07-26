@@ -8,12 +8,10 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-
   const logOn = async (email, password) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/dashboard");
-      
     } catch (error) {
       console.error("An error occurred:", error);
     }

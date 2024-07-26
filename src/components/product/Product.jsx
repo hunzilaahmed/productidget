@@ -13,10 +13,12 @@ const Product = () => {
     Setdate(date);
   }, []);
   const goToCart = (productId) => {
-    console.log(productId);
-    navigation(`/Detail/${productId}`).catch((error) =>
-      console.error("Error:", error)
-    );
+    try {
+      navigation(`/Detail/${productId}`);
+      console.log(productId);
+    } catch (error) {
+      console.log(error + "error.....!");
+    }
   };
 
   return (
@@ -43,7 +45,7 @@ const Product = () => {
                   <h4 className="text-lg font-bold mb-2">{item.title}</h4>
                 </div>
 
-                <div >
+                <div>
                   <p className="text-lg  mb-4">${item.price}</p>
                   <button
                     onClick={() => goToCart(item.id)}
